@@ -1,0 +1,174 @@
+/*
+
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", system-ui;
+  line-height: 1;
+}
+
+.secction {
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 100%;
+}
+
+.figure {
+  overflow: hidden;
+}
+
+.img:hover {
+  transform: scale(1.1);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container {
+  width: 60rem;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.content-box {
+  padding: 2.4rem 2.4rem 0 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.header-primarry,
+.price {
+  font-family: "Fraunces", system-ui;
+}
+
+.cent {
+  letter-spacing: 0.7rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.header-primarry {
+  font-size: 3.6rem;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.content {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.price {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.price-strigout {
+  font-size: 1.2rem;
+  text-decoration: line-through;
+}
+
+.button {
+  padding: 1.4rem;
+  border: none;
+  border-radius: 1.1rem;
+  background-color: hsl(158, 36%, 37%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.button:hover {
+  background-color: hsl(158, 36%, 29%);
+  cursor: pointer;
+}
+
+.button-span {
+  display: block;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+@media (max-width: 43.4375em) {
+  html {
+    font-size: 50%;
+  }
+  .container {
+    max-width: 40rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+
+  .button {
+    margin-bottom: 2.4rem;
+  }
+}
